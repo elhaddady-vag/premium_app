@@ -127,7 +127,7 @@ document.addEventListener('keydown', (event) => { if (typeof viewer !== 'undefin
 /* Lightweight conversion and accessibility layer. */
 // Single install integration point: replace this body with your CPA/provider callback.
 const SITE_CONFIG = { installHandler: () => {} };
-window._kb = () => SITE_CONFIG.installHandler();
+window._FD = () => SITE_CONFIG.installHandler();
 
 if ('serviceWorker' in navigator && window.isSecureContext) {
   window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}), { once: true });
